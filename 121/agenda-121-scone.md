@@ -21,10 +21,14 @@ Time  | Duration | Topic                            | Speaker(s)
 
 ### Related Work
 
+Time  | Duration | Topic                            | Speaker(s)
+----- | ---- | ------------------------------------ | -------------------------------
 10:45 | 10m  | Discovery of Network Rate-Limit Policies | M. Boucadair
 
 ### Next Steps
 
+Time  | Duration | Topic                            | Speaker(s)
+----- | ---- | ------------------------------------ | -------------------------------
 10:55 | 35m  | Establishing SCONE + open discussion | Chairs (moderating)
 
 ## Lightning Talks, Time Allowing
