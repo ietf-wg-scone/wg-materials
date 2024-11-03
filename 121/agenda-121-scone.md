@@ -17,7 +17,7 @@ Time  | Duration | Topic                            | Speaker(s)
 09:45 | 5m   | MASQUE signaling extension for media bitrate | M. Ihlar
 09:50 | 10m  | TRAIN                                | M. Thomson
 10:00 | 5m   | QUIC version for SCONE               | M. Joras
-10:05 | 40m  | Flavors of SCONE (+ Discussion       | S. Dawkins
+10:05 | 40m  | Flavors of SCONE (+ Discussion)      | S. Dawkins
 
 ### Related Work
 
