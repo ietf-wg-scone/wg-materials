@@ -60,13 +60,13 @@ Ian Swett noted that there are some middlebox out there that does not accpet mul
 
 # Flavors of SCONE (+ Discussion)	S. Dawkins
 
-Martin Thomson asked for clarification on Client Initiated. Spencer said this was It was concluded that Train proposal likely are a yes as it requires both client and server to support TRAIN for it to work. Mirja noted that in comparision to other proposals this is a difference. 
+Martin Thomson asked for clarification on Client Initiated. Spencer said this was leftover termiology from previous versions of the charter (also known as "client opt-in"). It was concluded that TRAIN proposal likely are a yes as it requires both client and server to support TRAIN for it to work. Mirja noted that in comparision to other proposals this is a difference. 
 
-Kazuho Oku [missing, something about assymetric paths]
+Kazuho Oku asked about assymetric paths. Spencer said that we haven't talked about that (at least not in Spencer's presence), because we were focused on the network element(s) being on-path.
 
 Gorry Fairhurst: Throughput advice has directionality, we might need both. It was also noted that the format of Throughput advice extensibility is something the WG will discuss and is likely to change.
 
-Ian Swett: we need to have a solution that works when QUIC connections migrate to another ephermal port [or IP]. Ian also like to have bi-directional advice. 
+Ian Swett: we need to have a solution that works when QUIC connections migrate to another ephermal port [or IP]. This also includes QUIC connection migration and (eventually) Multipath QUIC. Ian would also like to have bi-directional advice.
 
 Abhishek Tiwari: we need more consensus on the throughput information. What is the process for this discussion? Brian thinks that one can seperate the signal semantics and the possibility to do implementation on a coverged protocol solution.
 
@@ -76,9 +76,10 @@ Ted Hardie notes that a difference between SCONE and TRAIN is that the upstream 
 
 Matt Joras notes that the ones that will set the rates are doing this based on economic reasons, and these changes. Concerned that we need to have sufficient extensibility and format flexibility to enable easily adjust to future requirements. 
 
-Gorry Fairhurst: unsure about the impact of the frequency of signal. Also don't see a need to do this for all, only the heavy hitters. So one may not know initial. But getting going is also good. 
+Gorry Fairhurst: unsure about the impact of the frequency of signal for capacity. Also don't see a need to do this for all. Second, Service protection is only do it for the top talkers. So one may
+not know initial, need to look at every packet going past, which almost like route alert thing. Therefore be careful to limit thing.
 
-Martin Thomson notes that TRAIN doesn't encapsualte, TRAIN and the application protocol are adjacent packets. The security aspect, there are a big difference between the SCONE and TRAIN here to minimize havoc. Brian notes again that the WG should develop what to signal and how in parallel. 
+Martin Thomson: TRAIN doesn't encapsulate, TRAIN and the actual QUIC application protocol are adjacent packets in a single UDP datagram.  The security aspect, there are a big difference between the SCONE and TRAIN here to minimize havoc. Brian notes again that the WG should develop what to signal and how in parallel. 
 
 Kazuho Oku we have to look on the security. For example Multiple middleboxes will result in multiple response. 
 
@@ -88,19 +89,28 @@ Tommy Pauly supports that Masque solution is a complement and can be used for ce
 
 Sanjay Mishra supports working on what the throughput advice is and enable boundaries as max. 
 
-Ian Swett: less CPU is good. Want something that is multipath and connection migration friendly. Don't need to indicate the traffic type early, that can wait for the future. Injecting packets makes me scared. The field size we can adjust. Supporting moving 
+Ian Sweet: less CPU is good. Want something that is multipath and connection migration friendly. Don't need to indicate the traffic type
+early, that can wait for the future. Injecting packets makes me scared. The field size we can adjust. Supporting moving forwarding with something
+soon and quicker.
 
-Chris Seal: I am bothered by the single number. Want to give multiple advices at the same time, and avoid needing to update the signal for each video. Persistance.
+Chris Seal I am bothered by the single number in terms of bit rate to go. Want to give multiple advices at the same time, and avoid needing MASQUE Proxy or anything to update the signal for
+each video. The second is look for Persistence, don't keep ask for every video.
 
 Mirja Kühlewind: MASQUE is a complement lets start working on it. We need to go through the different main design differences and analyze them from security and deployability. Brian noted that appear a consensus emerging for a Masque solution that uses the same infromation model. 
 
 Daniel Huang what about giving advice across multiple flows for the total forwarding capacity. For communiation across multiple hops, whether protocol message sent from network device from each hop or only one single specific network device
 
+Spencer Dawkins commented on a number of the earlier comments. 
+* For Lucas - it makes a difference whether QUIC load-balancers are between the client endpoint and the network element or not. This is a difference between SCONE and TRAIN, because TRAIN goes all the way to the other endpoint, so QUIC load balancers will always be somewhere between the client endpoint and the server endpoint. 
+* For Gorry - we shouldn't need polling, because our target is applications that are already adjusting to path conditions. We're just trying to give them advance notice of limitations they will discover soon enough anyway.
+* For Martin - I agree that we need to talk about security very soon. 
+* For Ian - As you suspected, the type of traffic doesn't matter, because no one who can't use the advice we're providing would bother asking for advice, and we don't actually care what use the client makes of the advice. Either the client makes requests that result in throughput within the advised limitations, or it doesn't, and if it doesn't, we're back to the network element doing violence to packets that don't conform to the advice the network element provided. 
+
 # Establishing SCONE + open discussion	Chairs 
 
 Brian Trammell as chair proposed to do two Design Team one for information model and another from the protocol. Martin Thomson thinks they are too closely realted. 
 
-Spencer Dawkins indicated that more deep presentations would be suitable for a first Virtual Interim. 
+Spencer Dawkins indicated that more deep presentations would be suitable for a first Virtual Interim. None of these proposals have previously been presented to the chartered working group, and the working group hasn't had a chance to provide feedback about the attributes of each proposal to the draft authors. Do that before we ask authors to merge their proposals.
 
 Dan notes that there appear confusion about the use cases and what requirements that means. A seperate design team can work on the requirements for the information model. 
 
