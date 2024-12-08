@@ -76,7 +76,8 @@ Ted Hardie notes that a difference between SCONE and TRAIN is that the upstream 
 
 Matt Joras notes that the ones that will set the rates are doing this based on economic reasons, and these changes. Concerned that we need to have sufficient extensibility and format flexibility to enable easily adjust to future requirements. 
 
-Gorry Fairhurst: unsure about the impact of the frequency of signal. Also don't see a need to do this for all, only the heavy hitters. So one may not know initial. But getting going is also good. 
+Gorry Fairhurst: unsure about the impact of the frequency of signal for capacity. Also don't see a need to do this for all. Second, Service protection is only do it for the top talkers. So one may
+not know initial, need to look at every packet going past, which almost like route alert thing. Therefore be careful to limit thing.
 
 Martin Thomson: TRAIN doesn't encapsulate, TRAIN and the actual QUIC application protocol are adjacent packets in a single UDP datagram.  The security aspect, there are a big difference between the SCONE and TRAIN here to minimize havoc. Brian notes again that the WG should develop what to signal and how in parallel. 
 
@@ -88,9 +89,12 @@ Tommy Pauly supports that Masque solution is a complement and can be used for ce
 
 Sanjay Mishra supports working on what the throughput advice is and enable boundaries as max. 
 
-Ian Swett: less CPU is good. Want something that is multipath and connection migration friendly. Don't need to indicate the traffic type early, that can wait for the future. Injecting packets makes me scared. The field size we can adjust. Supporting moving 
+Ian Sweet: less CPU is good. Want something that is multipath and connection migration friendly. Don't need to indicate the traffic type
+early, that can wait for the future. Injecting packets makes me scared. The field size we can adjust. Supporting moving forwarding with something
+soon and quicker.
 
-Chris Seal: I am bothered by the single number. Want to give multiple advices at the same time, and avoid needing to update the signal for each video. Persistance.
+Chris Seal I am bothered by the single number in terms of bit rate to go. Want to give multiple advices at the same time, and avoid needing MASQUE Proxy or anything to update the signal for
+each video. The second is look for Persistence, don't keep ask for every video.
 
 Mirja Kühlewind: MASQUE is a complement lets start working on it. We need to go through the different main design differences and analyze them from security and deployability. Brian noted that appear a consensus emerging for a Masque solution that uses the same infromation model. 
 
