@@ -1,0 +1,2 @@
+ - discussion of manageability and applicability, aiming to converge on a doc for adoption.
+ - close on open issues in -protocol as necessary.

@@ -1,0 +1,5 @@
+close on the following issues to allow us to finalize -scone-protocol:
+ - initial indication: https://github.com/ietf-wg-scone/scone/issues/5
+ - time window: https://github.com/ietf-wg-scone/scone/issues/20
+ - if-needed, injection advice: https://github.com/ietf-wg-scone/scone/issues/21
+
