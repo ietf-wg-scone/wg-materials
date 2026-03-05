@@ -8,7 +8,7 @@ Time  | dur | Topic                                           | Speaker
 14:25 | 10m | Interoperability / Implementation Discussion    | W. Eddy
 .     | .   | *Applicability and Manageability*               | .
 14:35 |  5m | applicability-manageability-01 updates          | Z. Sarker
-14:40 |  5m | 3GGP status update                              | Z. Sarker
+14:40 |  5m | 3GPP status update                              | Z. Sarker
 14:45 | 15m | draft-gundavelli-scone-wifi-applicability-00    | S. Gundavelli
 15:00 | 30m | Discussion: where do we put applicability?      | Z. Sarker / all
 .     | .   | *Individual Drafts*                             | .
