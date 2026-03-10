@@ -13,4 +13,5 @@ Time  | dur | Topic                                           | Speaker
 15:00 | 30m | Discussion: where do we put applicability?      | Z. Sarker / all
 .     | .   | *Individual Drafts*                             | .
 15:30 | 15m | draft-ihlar-scone-masque-mediabitrate-04        | M. Ihlar / M. Kühlewind
-15:45 |     | AOB                                             |
+15:45 | 10m | draft-mdt-quic-explicit-measurements-04         | M. Ihlar
+15:55 |     | AOB
