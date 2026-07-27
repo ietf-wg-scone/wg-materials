@@ -37,7 +37,7 @@ The SCONE Working Group met at IETF 126 to discuss the finalization of the core 
 ### 4. Future of the Working Group & New Work
 The working group discussed several proposals for potential rechartering or post-completion work:
 
-* **SCONE Echo (`draft-duke-scone-echo`):** **Martin Duke** requested feedback on the draft, specifically regarding its privacy properties. He noted that if SCONE closes, the work could potentially move to the QUIC WG, and that his employer would likely implement it regardless.
+* **SCONE Echo (`draft-duke-scone-echo`):** **Martin Duke** requested feedback on the draft, specifically regarding its privacy properties. He noted that if SCONE closes, the work could potentially move to the QUIC WG, and that his employer would likely implement it regardless unless there is a strong signal the draft is bad for the internet.
 * **SCONE for TCP:** Mentioned as a potential item for TCPM or SCONE if rechartered.
 * **RoCE (RDMA over Converged Ethernet) over UDP:** **Tianji** proposed using SCONE-like signaling for wide-area, cross-datacenter RoCE networks to handle slow congestion convergence over long RTTs.
   * **Lars Eggert** questioned how this would interface with RoCE's highly integrated fabric flow control.
